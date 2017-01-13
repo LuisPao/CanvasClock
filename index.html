@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+</head>
+
+<body>
+    <canvas width='600' height='400' id='cv'>
+        您的浏览器不支持canvas
+    </canvas>
+    <script src="Clock.js"></script>
+    <script>
+    var cv = document.getElementById('cv');
+    cv.style.border = '1px dashed red';
+    var ctx = cv.getContext("2d");
+    var clock = new Clock({
+        ctx: ctx,
+        r: 100
+    });
+    clock.running();
+    </script>
+</body>
+
+</html>
